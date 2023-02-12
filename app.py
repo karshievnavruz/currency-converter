@@ -12,10 +12,15 @@ def get_data():
     return usd
 
 
+@app.route('/')
+def home():
+    return 'hi, from Python-2022I'
+
 @app.route('/api/to-usd', methods=['GET'])
 def to_usd():
     """
     Convert to USD
+
     Returns:
         json: Converted amount
     
@@ -46,6 +51,7 @@ def to_usd():
 def to_uzs():
     """
     Convert to UZS
+
     Returns:
         json: Converted amount
     
@@ -74,4 +80,4 @@ def to_uzs():
     
 
 if __name__ == '__main__':
-    app.run(debug=True)    
+    app.run()    
